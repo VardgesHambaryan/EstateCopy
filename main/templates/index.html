@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'img/logo3.png' %}">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+       <div class="header-main">
+          <div class="logo">
+             <!-- <img src="./img/shin-logo.png" alt=""> -->
+          </div>
+          <div class="open-nav-menu">
+             <span></span>
+          </div>
+          <div class="menu-overlay">
+          </div>
+          <!-- navigation menu start -->
+          <nav class="nav-menu">
+            <div class="close-nav-menu">
+              x
+            </div>
+            <ul class="menu">
+               <li class="menu-item menu-item-has-children">
+                  <a href="#" data-toggle="sub-menu">Ծառայություններ <i class="plus"></i></a>
+                  <ul class="sub-menu">
+                    
+                      <li class="menu-item"><a href="{% url 'vorak' %}">Որակի տեխնիկական հսկողություն</a></li>
+                  </ul>
+               </li>
+              
+               <li class="menu-item menu-item-has-children">
+                  <a href="#" data-toggle="sub-menu">Մեր մասին <i class="plus"></i></a>
+                  <ul class="sub-menu">
+                      <li class="menu-item"><a href="#licenses">Մեր լիցենզիաները</a></li>
+                     
+                  </ul>
+               </li>
+               <li class="menu-item">
+                  <a href="{% url "gallery" %}">Մեր աշխատանքները</a>
+               </li>
+               <li class="menu-item">
+                  <a href="#contacts">Հետադարձ կապ</a>
+               </li>
+            </ul>
+          </nav>
+          <!-- navigation menu end -->
+       </div>
+    </div>
+ </header>
+    <!-- slider -->
+    <!-- <div class="container">
+        <div class="image-container">
+            <div class="text">
+                Обследование технического состояния <br> зданий и сооружений
+            </div>
+            <img src="./img/image1.jpg" id="content1" class="active">
+            <img src="./img/image2.jpg" id="content2">
+            <img src="./img/image3.jpg" id="content3">
+            <img src="./img/image4.jpg" id="content4">
+            
+        </div>
+        <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            <button onclick = "dot(4)"></button>
+        </div>
+        <button id="prev" onclick="prev()"> &lt; </button>
+        <button id="next" onclick="next()"> &gt; </button>
+    </div> -->
+    <!-- align img -->
+<section id="aboutUs">
+  <img src="{% static 'img/about2.jpg' %}" alt="computer user ">
+  <div class="content">
+      <h2>ՄԵՐ ՄԱՍԻՆ</h2>
+      <h4> Ներկայացնենք մեր գործունեության մասին </h4>
+      <p class="description">
+        «ՏԵԽՆՈ ՇԻՆ» ՍՊԸ հանդիսանում է Հայաստանի Հանրապետության <br>
+        լիցենզավորված կազմակերպություն, որը շինարարության ոլորտում իրականացնում է՝ <br>
+        <li> որակի տեխնիկական հսկողություն։</li> <br>    
+
+        <li>այլ տարաբնույթ խորհրդատվական ծառայություններ շինարարության տեխնիկական սպասարկման ոլորտում:</li>
+      </p>
+      <button class="btn">Իմանալ ավելին</button>
+  </div>
+</section>
+<!--end align img -->
+
+<!-- slider -->
+<div class="wrapper wrapper-bottom">
+      <i id="left" class="fa-solid fa-angle-left"><</i>
+      <ul class="carousel">
+        <li class="card" id="nkar1">
+          
+             <span>Իմանալ ավելին </span>
+        </li>
+        <li class="card"id="nkar2">
+            <span>Իմանալ ավելին </span>
+        </li>
+        <li class="card "id="nkar3">
+           <span>Իմանալ ավելին </span>
+        </li>
+        <li class="card "id="nkar4">
+         <span>Իմանալ ավելին </span>
+        </li>
+        <li class="card "id="nkar5">
+            <span>Իմանալ ավելին </span>
+        </li>
+        <li class="card "id="nkar6">
+            <span>Իմանալ ավելին </span>
+        </li>
+        
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right">></i>
+</div>
+<!--end  slider -->
+
+<!-- text-centr -->
+<div class="text-centr">
+<h2 class="h2"> Մեր ծառայությունները</h2>
+<h1 class="h1">ՏԵԽՆՈ ՇԻՆ</h1>
+<div class="centr_p">
+<p class="p1">«ՏԵԽՆՈ ՇԻՆ» ՍՊԸ-ն շինարարության ոլորտում տեխնիկական աջակցություն իրականացնող առաջատար կազմակեպություն է: Մենք<br>առաջնորդվում ենք անկախ երրորդ կողմի սկզբունքով և ապահովում լաբորատոր փորձարկումների թափանցիկությունը: <br>Մեր տեխնիկական հագեցվածությունը, որակյալ անձնակազմը, գործարար հարաբերությունները ուղղված են հաճախորդների կարիքների բավարարմանը, <br>ինչը թույլ է տալիս մեր գործընկերների մոտ ձեռք բերել կայուն վստահություն: Մենք հնարավորություն ունենք մասնակցելու ցանկացած մասշտաբի <br> նախագծերի ՀՀ ողջ տարածքում: <br> Մեզ հետ կարող եք վստահ լինել ձեր արտադրանքի որակի մեջ և հասնել ցանկալի նպատակներին նվազագույն ռիսկի գործոնով: <br> Հարցերի դեպքում խնդրում ենք կապվել մեզ հետ texno.shin@mail.ru էլեկտրոնային հասցեով կամ այցելել մեր գրասենյակ` <br> ՀՀ, Գեղարքունիքի մարզ գյուղ Գեղամավան  2 փ. 3 նրբ. տ. 14:</p>
+</div>
+</div>
+<!--end  text-centr -->
+
+    <main id="main" role="main">
+        <section id="image-section">
+          <div class="container3">
+            <article id="contain-image">
+              <img src="{% static 'img/3.jpg' %}" alt="Image" class="img" id="img1">
+              <img src="{% static 'img/4.jpg' %}" alt="Image" class="img" id="img2">
+              <img src="{% static 'img/5.jpg' %}" alt="Image" class="img" id="img3">
+            
+              <div id="contain-button">
+                <ion-icon name="radio-button-on" class="button" id="button1"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button2"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button3"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button4"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button5"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button6"></ion-icon>
+                <ion-icon name="radio-button-on" class="button" id="button7"></ion-icon>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    
+<!-- end slider -->
+
+<!-- service -->
+
+ 
+  <!-- end slider -->
+
+
+
+  <!-- service -->
+  
+  <section class="certificates" id="licenses">
+    <h2>Մեր լիցենզիաները</h2>
+    <div class="certificate-gallery ">
+        <img src="{% static 'img/certificate11.png' %}" alt="Certificate 1">
+        <!-- <img src="./img/original (1).jpg" alt="Certificate 2">
+        <img src="./img/original (2).jpg" alt="Certificate 3">
+        <img src="./img/original (3).jpg" alt="Certificate 4">
+        <img src="./img/original (4).jpg" alt="Certificate 5"> -->
+    </div>
+</section>
+  
+  <!--end service -->
+
+
+<!-- map -->
+
+<div class="map">
+  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d392.49777272887314!2d44.886768478459054!3d40.566747514435114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d40.5645972!2d44.883122!4m3!3m2!1d40.566821399999995!2d44.886899299999996!5e1!3m2!1sen!2sam!4v1716051180327!5m2!1sen!2sam" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d757.7161963239611!2d44.8865445431887!3d40.56666312487688!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x404047c9257b9113%3A0x6aa6f7f8506a3d9f!2sGeghamavan!3m2!1d40.56594!2d44.894723899999995!4m5!1s0x404047c9257b9113%3A0x6aa6f7f8506a3d9f!2sGeghamavan!3m2!1d40.56594!2d44.894723899999995!5e0!3m2!1sen!2sam!4v1716223917384!5m2!1sen!2sam" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!--end  map -->
+
+<!-- contact -->
+<div class="container-7-parent">
+    <div class="container7" id="contacts">
+  <div class="content">
+    <div class="left-side">
+      <!-- <div class="address details">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="topic">Հասցե</div>
+        <div class="text-one">ՀՀ, 0009 ք․ Երևան, Կորյունի 19ա</div>
+      </div> -->
+      <div class="phone details">
+        <i class="fas fa-phone-alt"></i>
+        <div class="topic">Հեռախոսահամար</div>
+        <div class="text-one">Հեռ՝․  (+374 93)828121</div>
+      </div>
+      <div class="email details">
+        <i class="fas fa-envelope"></i>
+        <div class="topic">Էլ. փոստ</div>
+        <div class="text-one">texno.shin@mail.ru</div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="topic-text">Ուղարկիր մեզ նամակ</div>
+
+    <form method="post">{% csrf_token %}
+
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Գրիր քո անունը">
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Գրիր քո Էլ. հասցեն">
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="phone" placeholder="Գրիր քո Հեռ․ համարը">
+      </div>
+
+      <div class="input-box message-box">
+        
+      </div>
+      <div class="button">
+        <input type="submit" value="Ուղարկիր հիմա" >
+      </div>
+
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+<!-- end contact -->
+
+<!--  hovanavor -->
+<h1 class="h7">Մեր գործընկերները</h1>
+<div class="logos">
+    <div class="logos-slide">
+      <img src="">Աբովյանի համայնքապետարան
+      <img src="">Հրազդանի համայնքապետարան
+      <img src="">Սևանի   համայնքապետարան
+      <img src="">Մարտունու  համայնքապետարան
+      <img src="">Ճամբարակի  համայնքապետարան
+      <img src="">Նոր Հաճնի  համայնքապետարան
+      <img src="">Աշտարակի  համայնքապետարան
+      <img src="">Ծաղկաձորի  համայնքապետարան
+      <img src="">ՄԱԶԾ-ի Կայուն համայնքներ
+
+    </div>
+
+  </div>
+
+
+<!-- end  hovanavor -->
+
+
+
+<footer id="footer">
+  <div class="container8">
+      <div class="footer-logo">
+          <img src="{% static 'img/logo3.png' %}" alt="Logo">
+      </div>
+      <div class="footer-contact">
+          <ul>
+              <li><img src="{% static 'img/gmail.png' %}" alt="Email Icon"> texno.shin@mail.ru</li>
+              <li><img src="{% static 'img/phone.jpg' %}" alt="Phone Icon"> (+374 93)828121</li>
+              <li><img src="{% static 'img/location.png' %}" alt="Location Icon"> Գեղամավան
+              </li>
+          </ul>
+      </div>
+      <div class="footer-links">
+          <ul>
+              <li>Գլխավոր</li>
+              <li>Ծառայություններ</li>
+              <li>Մեր մասին</li>
+              <li>Նորություններ</li>
+              <li>Հետադարձ կապ</li>
+          </ul>
+      </div>
+  </div>
+  <!-- <div class="footer-bottom">
+      <p>ShinCertificate © 2024 by YOCO.AM | All Rights Reserved</p> -->
+  </div>
+</footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
